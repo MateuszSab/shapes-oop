@@ -5,5 +5,8 @@ abstract class Shapes {
 class Square(a: Int) extends Shapes {
   override def perimeter: Int = a * 4
   override def area: Int = a * 2
-
+}
+class Rectangle(a: Int, b: Int) extends Shapes{
+  override def perimeter: Int = a * 2 + b * 2
+  override def area: Int = a * b
 }

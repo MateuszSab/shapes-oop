@@ -7,6 +7,12 @@ class ShapesSpec  extends AnyFlatSpec with should.Matchers {
     val tomek = new Square(2)
     tomek.perimeter shouldBe 8
     tomek.area shouldBe 4
+  }
+
+  "Rectangle" should "return 10 for perimeter and 6 for area" in{
+    val miś = new Rectangle(2, 3)
+    miś.perimeter shouldBe 10
+    miś.area shouldBe 6
 
   }
 }
