@@ -1,18 +1,23 @@
 abstract class Shapes {
-  def perimeter: Int
-  def area: Int
+  def perimeter: Double
+  def area: Double
 }
-class Square(a: Int) extends Shapes {
-  override def perimeter: Int = a * 4
-  override def area: Int = a * 2
+class Square(a: Double) extends Shapes {
+  override def perimeter: Double = a * 4
+  override def area: Double = a * 2
 }
-class Rectangle(a: Int, b: Int) extends Shapes{
-  override def perimeter: Int = a * 2 + b * 2
-  override def area: Int = a * b
+class Rectangle(a: Double, b: Double) extends Shapes{
+  override def perimeter: Double = a * 2 + b * 2
+  override def area: Double = a * b
 }
-class Triangle(floor: Int, b: Int, c: Int) extends Shapes {
+class Triangle(floor: Double, b: Double, c: Double) extends Shapes {
   import scala.math._
-  override def perimeter: Int = floor + b + c
+  override def perimeter: Double = floor + b + c
   val p = (floor + b + c) / 2
-  override def area: Int = sqrt(p * (p - floor) * (p - b) * (p - c) ).toInt
+  override def area: Double = sqrt(p * (p - floor) * (p - b) * (p - c) )
+}
+class Circle(radius: Double) extends Shapes {
+  import scala.math._
+  override def perimeter: Double = (2 * Pi * radius)
+  override def area: Double = (Pi * pow(radius, 2))
 }
