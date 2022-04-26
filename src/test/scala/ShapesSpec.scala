@@ -13,6 +13,11 @@ class ShapesSpec  extends AnyFlatSpec with should.Matchers {
     val miś = new Rectangle(2, 3)
     miś.perimeter shouldBe 10
     miś.area shouldBe 6
+  }
 
+  "Triangle" should " " in {
+    val krzyś = new Triangle(10, 6, 6)
+    krzyś.perimeter shouldBe 22
+    krzyś.area shouldBe 16
   }
 }
