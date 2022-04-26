@@ -1,17 +1,17 @@
 # shapes-oop
 
-Defines the following classes to represent 2-dimentional figures:
+## Defines the following classes to represent 2-dimentional figures:
 
-Triangle
+1. Triangle
 
-Square
+2. Square
 
-Rectangle
+3. Rectangle
 
-Circle
+4. Circle
 
-The figures report the following:
+## The figures report the following:
 
-Perimeter 
+- Perimeter 
 
-Area 
+- Area 
