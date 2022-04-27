@@ -26,4 +26,20 @@ class ShapesSpec  extends AnyFlatSpec with should.Matchers {
     aa.perimeter shouldBe 16.0
     aa.area shouldBe 8.0
   }
+  "ShapesCollection" should "return true while adding a shape to collection" in {
+    val box = new ShapesCollection
+    val aa = new Square(4)
+    box.addToCollection(aa) shouldBe true
+  }
+
+  it should "return 24.583123951777 for sumAreas and 38.0 for sumPerimeters" in {
+    val box = new ShapesCollection
+    val aa = new Square(4)
+    val bb = new Triangle(10, 6, 6)
+    box.addToCollection(aa)
+    box.addToCollection(bb)
+    box.sumAreas shouldBe 24.583123951777
+    box.sumPerimeters shouldBe 38.0
+  }
+
 }
